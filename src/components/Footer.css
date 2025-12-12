@@ -1,0 +1,74 @@
+.footer {
+  background: #111; /* hitam elegan */
+  color: #eee;
+  padding: 70px 20px 40px;
+  text-align: center;
+}
+
+/* MAIN CONTENT */
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto 30px;
+}
+
+.footer-title {
+  font-size: 28px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #f5f2eb;
+}
+
+.footer-desc {
+  font-size: 15px;
+  max-width: 600px;
+  margin: auto;
+  opacity: 0.75;
+  line-height: 1.6;
+}
+
+/* SOCIAL ICONS */
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 25px;
+}
+
+.social-icon {
+  font-size: 22px;
+  background: #1a1a1a;
+  padding: 14px;
+  border-radius: 50%;
+  display: flex;
+  color: #c5a06d; /* gold */
+  border: 1px solid rgba(197, 160, 109, 0.4);
+  transition: 0.35s ease;
+}
+
+.social-icon:hover {
+  background: #c5a06d;
+  color: #111;
+  transform: translateY(-6px) scale(1.08);
+  box-shadow: 0 8px 18px rgba(197, 160, 109, 0.35);
+}
+
+/* BOTTOM LINE */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.12);
+  padding-top: 18px;
+  margin-top: 30px;
+}
+
+.footer-bottom p {
+  font-size: 13px;
+  opacity: 0.55;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .social-icon {
+    font-size: 20px;
+    padding: 12px;
+  }
+}

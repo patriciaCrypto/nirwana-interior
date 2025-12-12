@@ -1,115 +1,104 @@
-/* === SECTION === */
 .contact-section {
-  padding: 100px 20px;
+  padding: 100px 30px;
   text-align: center;
-  background: #f3e9d7; /* premium warm cream */
+  background: #faf7f2;
 }
 
 .contact-title {
   font-size: 36px;
-  margin-bottom: 60px;
-  color: #4e3b2f;
-  font-weight: 800;
-  letter-spacing: 1.2px;
+  font-weight: 700;
+  color: #2b2b2b;
 }
 
-/* === CONTAINER === */
+.contact-subtitle {
+  font-size: 16px;
+  color: #777;
+  margin-top: 6px;
+  margin-bottom: 45px;
+}
+
 .contact-container {
   display: flex;
   justify-content: center;
-  gap: 35px;
-  max-width: 1200px;
-  margin: auto;
-  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1150px;
+  margin: 0 auto;
 }
 
-/* === CONTACT CARD PREMIUM === */
+/* Card */
 .contact-card {
   flex: 1;
-  min-width: 330px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-
-  padding: 26px 28px;
+  max-width: 330px;
+  padding: 35px 25px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(14px);
   border-radius: 22px;
-  background: #ffffff;
-
-  border: 1.5px solid #e6dcc7;
-  box-shadow: 0 5px 25px rgba(0,0,0,0.08);
-
-  transition: 0.35s ease;
+  border: 1.5px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.10);
   text-decoration: none;
+  transition: 0.35s ease;
+  color: #333;
 }
 
-/* Hover Premium */
 .contact-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 35px rgba(0,0,0,0.15);
-  border-color: #b69262;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+  border-color: #c5a06d;
 }
 
-/* === ICON STYLE EMBOSS === */
+/* Icon Circle */
 .icon-wrapper {
-  width: 55px;
-  height: 55px;
-  border-radius: 15px;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  box-shadow: inset 0 3px 8px rgba(0,0,0,0.1),
-              inset 0 -3px 8px rgba(255,255,255,0.4);
-
-  transition: 0.3s ease;
-}
-
-.contact-card:hover .icon-wrapper {
-  transform: scale(1.08);
+  background: linear-gradient(135deg, #ffffff, #e7e7e7);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 /* Icon */
 .contact-icon {
-  font-size: 30px;
+  font-size: 32px;
   color: white;
 }
 
-/* Icon bg colors */
+/* Icon colors */
 .whatsapp-bg {
-  background: #25d366;
+  background: linear-gradient(135deg, #25d366, #1ebe5d);
 }
 
 .email-bg {
-  background: #e74c3c;
+  background: linear-gradient(135deg, #d44638, #b33a2f);
 }
 
 .location-bg {
-  background: #c5a06d; /* gold */
+  background: linear-gradient(135deg, #c5a06d, #b79258);
 }
 
-/* === TEXT === */
+/* Text */
 .contact-card h4 {
-  font-size: 21px;
-  margin: 0;
-  color: #4e3b2f;
-  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 6px;
+  font-weight: 600;
 }
 
 .contact-card p {
-  margin: 2px 0 0;
   font-size: 15px;
-  color: #6d665c;
+  color: #555;
 }
 
-/* === RESPONSIVE === */
+/* Responsive */
 @media (max-width: 900px) {
   .contact-container {
     flex-direction: column;
     align-items: center;
+    gap: 25px;
   }
 
   .contact-card {
-    width: 100%;
-    max-width: 550px;
+    max-width: 400px;
   }
 }

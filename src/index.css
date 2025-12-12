@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 :root {
@@ -28,11 +29,23 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
   min-height: 100vh;
+  width: 100%;
+  display: block;   /* ⬅️ diperbaiki: SEMULA flex, bikin layout kacau */
 }
+
+/* ========== LAYOUT AGAR FOOTER SELALU DI BAWAH ========== */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+
+/* ========================================================= */
 
 h1 {
   font-size: 3.2em;
@@ -70,3 +83,22 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+/* ===== Scroll Progress Bar ===== */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: transparent;
+  z-index: 9999;
+}
+
+.scroll-progress {
+  height: 100%;
+  background: linear-gradient(to right, #e6a546, #f7d08a);
+  width: 0%;
+  transition: width 0.15s linear;
+  border-radius: 0 4px 4px 0;
+}
+
