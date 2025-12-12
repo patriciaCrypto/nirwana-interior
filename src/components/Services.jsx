@@ -12,14 +12,17 @@ function Services() {
 
   return (
     <section className="services" id="services">
-      <h2>Layanan Kami</h2>
+      <h2 data-aos="fade-up">Layanan Kami</h2>
+
+      
 
       {/* ✨ Tambahan teks instruksi */}
       <p className="service-instruction">
         Tekan salah satu layanan di bawah untuk melihat portofolio kami.
       </p>
 
-      <div className="service-grid">
+      <div className="service-card" onClick={openCurtainPDF} data-aos="fade-up">
+
 
         {/* CARD 1 — Curtain */}
         <div
