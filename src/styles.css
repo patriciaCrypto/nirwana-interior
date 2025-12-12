@@ -154,7 +154,7 @@ body {
 /* ============================
    SERVICES SECTION
 ============================ */
-  .services {
+.services {
   padding: 60px 40px;
   text-align: center;
   animation: fadeIn 1.2s ease;
@@ -163,10 +163,9 @@ body {
 .services h2 {
   font-size: 32px;
   font-weight: 700;
-  color: rgb(14, 13, 13); /* supaya kelihatan */
+  color: rgb(14, 13, 13);
 }
 
-/* Grid Layout */
 .service-grid {
   margin-top: 35px;
   display: grid;
@@ -174,7 +173,7 @@ body {
   gap: 25px;
 }
 
-/* Card jadi background image full */
+/* Service card */
 .service-card {
   position: relative;
   height: 380px;
@@ -188,12 +187,10 @@ body {
   animation: slideUp 1.2s ease;
 }
 
-/* Efek hover */
 .service-card:hover {
   transform: translateY(-8px) scale(1.02);
 }
 
-/* Gambar full memenuhi card */
 .service-card img {
   position: absolute;
   inset: 0;
@@ -201,16 +198,15 @@ body {
   height: 100%;
   object-fit: cover;
   z-index: 0;
-  filter: brightness(55%); /* supaya teks putih terlihat */
+  filter: brightness(55%);
 }
 
-/* Teks di atas gambar */
 .service-card h3,
 .service-card p {
   position: relative;
   z-index: 2;
-  color: rgb(255, 255, 255); /* teks putih */
-  text-align: left; /* opsional – bisa center */
+  color: #fff;
+  text-align: left;
 }
 
 .service-card h3 {
@@ -223,7 +219,6 @@ body {
   font-size: 16px;
   opacity: 0.9;
 }
-
 
 /* ============================
    FOOTER
@@ -264,9 +259,7 @@ body {
     padding: 15px 20px;
   }
 }
-/* =======================
-      CONTACT SECTION
-=======================*/
+
 /* =======================
       CONTACT SECTION
 =======================*/
@@ -314,12 +307,10 @@ body {
   color: #6b5a49;
 }
 
-/* ICON styling */
 .contact-icon {
   font-size: 30px;
 }
 
-/* Warna icon sesuai aplikasi */
 .whatsapp {
   color: #25D366;
 }
@@ -330,4 +321,16 @@ body {
 
 .location {
   color: #d9534f;
+}
+/* FIX: pastikan service card bisa diklik */
+.services,
+.service-grid,
+.service-card {
+  position: relative !important;
+  z-index: 999 !important;
+}
+
+.hero,
+.hero * {
+  z-index: 0 !important;
 }

@@ -1,35 +1,53 @@
 import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import "./Contact.css";
 
 function Contact() {
   return (
     <section id="kontak" className="contact-section">
-      <h2>Kontak Kami</h2>
+      <h2 className="contact-title">Kontak Kami</h2>
 
       <div className="contact-container">
 
-        <div className="contact-item">
-          <FaWhatsapp className="contact-icon whatsapp" />
+        <a
+          href="https://wa.me/6285100580607?text=Halo,%20saya%20ingin%20memesan%20layanan%20Curtain%20%26%20Interior."
+          target="_blank"
+          className="contact-card"
+        >
+          <div className="icon-wrapper whatsapp-bg">
+            <FaWhatsapp className="contact-icon" />
+          </div>
           <div>
             <h4>WhatsApp</h4>
-            <p>085100580607</p>
+            <p>0851-0058-0607</p>
           </div>
-        </div>
+        </a>
 
-        <div className="contact-item">
-          <FaEnvelope className="contact-icon email" />
+        <a
+          href="mailto:jennysie2707@gmail.com"
+          className="contact-card"
+        >
+          <div className="icon-wrapper email-bg">
+            <FaEnvelope className="contact-icon" />
+          </div>
           <div>
             <h4>Email</h4>
             <p>jennysie2707@gmail.com</p>
           </div>
-        </div>
+        </a>
 
-        <div className="contact-item">
-          <FaMapMarkerAlt className="contact-icon location" />
+        <a
+          href="https://www.google.com/maps?q=Surabaya,+Malang"
+          target="_blank"
+          className="contact-card"
+        >
+          <div className="icon-wrapper location-bg">
+            <FaMapMarkerAlt className="contact-icon" />
+          </div>
           <div>
             <h4>Lokasi</h4>
-            <p>Seputar Surabaya & Malang</p>
+            <p>Surabaya & Malang</p>
           </div>
-        </div>
+        </a>
 
       </div>
     </section>

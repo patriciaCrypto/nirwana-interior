@@ -1,0 +1,115 @@
+/* === SECTION === */
+.contact-section {
+  padding: 100px 20px;
+  text-align: center;
+  background: #f3e9d7; /* premium warm cream */
+}
+
+.contact-title {
+  font-size: 36px;
+  margin-bottom: 60px;
+  color: #4e3b2f;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+/* === CONTAINER === */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+/* === CONTACT CARD PREMIUM === */
+.contact-card {
+  flex: 1;
+  min-width: 330px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  padding: 26px 28px;
+  border-radius: 22px;
+  background: #ffffff;
+
+  border: 1.5px solid #e6dcc7;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+
+  transition: 0.35s ease;
+  text-decoration: none;
+}
+
+/* Hover Premium */
+.contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+  border-color: #b69262;
+}
+
+/* === ICON STYLE EMBOSS === */
+.icon-wrapper {
+  width: 55px;
+  height: 55px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: inset 0 3px 8px rgba(0,0,0,0.1),
+              inset 0 -3px 8px rgba(255,255,255,0.4);
+
+  transition: 0.3s ease;
+}
+
+.contact-card:hover .icon-wrapper {
+  transform: scale(1.08);
+}
+
+/* Icon */
+.contact-icon {
+  font-size: 30px;
+  color: white;
+}
+
+/* Icon bg colors */
+.whatsapp-bg {
+  background: #25d366;
+}
+
+.email-bg {
+  background: #e74c3c;
+}
+
+.location-bg {
+  background: #c5a06d; /* gold */
+}
+
+/* === TEXT === */
+.contact-card h4 {
+  font-size: 21px;
+  margin: 0;
+  color: #4e3b2f;
+  font-weight: 700;
+}
+
+.contact-card p {
+  margin: 2px 0 0;
+  font-size: 15px;
+  color: #6d665c;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-card {
+    width: 100%;
+    max-width: 550px;
+  }
+}
