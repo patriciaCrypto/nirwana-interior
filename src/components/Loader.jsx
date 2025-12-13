@@ -5,7 +5,7 @@ export default function Loader() {
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    // waktu loading muncul (2 detik)
+    // Loader tampil 2 detik lalu fade out
     const timer = setTimeout(() => {
       setFadeOut(true);
     }, 2000);
@@ -14,12 +14,14 @@ export default function Loader() {
   }, []);
 
   return (
-    <div className={`loader-wrapper ${fadeOut ? "fade-out" : ""}`}>
+    <div
+      className={`loader-wrapper ${fadeOut ? "fade-out" : ""}`}
+      aria-label="Page loading"
+    >
       <div className="loader-content">
         <div className="loader-logo">NIRWANA</div>
         <div className="loader-subtext">Curtain & Interior</div>
-
-        <div className="gold-spinner"></div>
+        <div className="gold-spinner" />
       </div>
     </div>
   );
