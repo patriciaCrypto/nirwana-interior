@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useEffect, useContext } from "react";
 import { Link } from "react-scroll";
 import "./Navbar.css";
 
+/* Dark Mode Context */
+import { ThemeContext } from "../context/ThemeContext";
+
 export default function Navbar() {
-  React.useEffect(() => {
+  const { darkMode, setDarkMode } = useContext(ThemeContext);
+
+  useEffect(() => {
     const handleScroll = () => {
+      const nav = document.querySelector(".nav");
+      if (!nav) return;
+
       if (window.scrollY > 50) {
-        document.querySelector(".nav").classList.add("shrink");
+        nav.classList.add("shrink");
       } else {
-        document.querySelector(".nav").classList.remove("shrink");
+        nav.classList.remove("shrink");
       }
     };
 
@@ -17,27 +25,36 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="nav">
+    <nav className={`nav ${darkMode ? "dark" : ""}`}>
       <div className="nav-container">
         <h1 className="nav-logo">NIRWANA CURTAIN & INTERIOR</h1>
 
         <ul className="nav-links">
           <li>
-            <Link to="hero" smooth={true} duration={600} offset={-80}>
+            <Link to="hero" smooth duration={600} offset={-80}>
               Beranda
             </Link>
           </li>
           <li>
-            <Link to="services" smooth={true} duration={600} offset={-80}>
+            <Link to="services" smooth duration={600} offset={-80}>
               Layanan
             </Link>
           </li>
           <li>
-            <Link to="contact" smooth={true} duration={600} offset={-80}>
+            <Link to="contact" smooth duration={600} offset={-80}>
               Kontak
             </Link>
           </li>
         </ul>
+
+        {/* Dark Mode Toggle */}
+        <button
+          className="darkmode-toggle"
+          onClick={() => setDarkMode(!darkMode)}
+          aria-label="Toggle dark mode"
+        >
+          {darkMode ? "☀️" : "🌙"}
+        </button>
       </div>
     </nav>
   );

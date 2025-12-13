@@ -20,6 +20,7 @@
 .contact-container {
   display: flex;
   justify-content: center;
+  align-items: center; /* ✅ INI SAJA YANG DITAMBAHKAN */
   gap: 40px;
   max-width: 1150px;
   margin: 0 auto;

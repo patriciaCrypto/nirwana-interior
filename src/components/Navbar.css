@@ -99,3 +99,18 @@
 .nav * {
   pointer-events: all !important;
 }
+/* Dark mode navbar */
+.nav.dark {
+  background: rgba(15, 15, 15, 0.95);
+}
+
+.darkmode-toggle {
+  background: none;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 16px;
+}

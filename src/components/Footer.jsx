@@ -32,7 +32,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/sheila.b.c.d?igsh=MXRvNDBxZXBxOGZqbg=="
             target="_blank"
             rel="noopener noreferrer"
             className="social-icon"
