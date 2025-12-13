@@ -7,7 +7,7 @@ function Services() {
   };
 
   const openInteriorPDF = () => {
-    window.open("/nirwana-interior/assets/pdf/porto3D.pdf", "_blank");
+    window.open("/nirwana-interior/assets/pdf/porto2025.pdf", "_blank");
   };
 
   return (
@@ -21,8 +21,7 @@ function Services() {
         Tekan salah satu layanan di bawah untuk melihat portofolio kami.
       </p>
 
-      <div className="service-card" onClick={openCurtainPDF} data-aos="fade-up">
-
+      <div className="service-grid">
 
         {/* CARD 1 — Curtain */}
         <div
